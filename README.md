@@ -166,6 +166,6 @@ addAlgorithm('newHash', async (data) => {
 MIT © [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty)
 
 ## 📫 Contact
-[![Linkedin](https://img.shields.io/badge/GitHub-Allem-Black)](https://www.linkedin.com/in/du5ty)
+[![Linkedin](https://img.shields.io/badge/Linkedin-Allem-Black)](https://www.linkedin.com/in/du5ty)
 [![Portfolio](https://img.shields.io/badge/Portfolio-allem.pro-blue)](https://allem.pro/)
 [![Email](https://img.shields.io/badge/Gmail-allemhamed98%40gmail.com-red)](mailto:allemhamed98@gmail.com)
