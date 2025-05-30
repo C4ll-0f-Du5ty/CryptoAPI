@@ -9,26 +9,26 @@ Hi! I'm [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty), a full-stack develo
 
 ## 🎯 Key Features
 🔑 **Encryption & Decryption**
-- Symmetric encryption (AES-256 CBC mode)
-- Triple DES encryption
-- Asymmetric RSA encryption (2048-bit key pairs)
+- Symmetric encryption: AES (CBC mode, min 16-char key), Triple DES (min 24-char key)
+- Asymmetric encryption: RSA (2048-bit key pairs)
 
 📊 **Hashing Algorithms**
 - SHA-256 and SHA-512 (Web Crypto API)
 - MD5 (educational purposes)
 
 ⚙️ **Security Features**
-- Client-side processing
-- Input validation
-- Secure key generation
+- Client-side processing to eliminate server-side vulnerabilities
+- Input validation for key lengths and RSA key formats
+- Secure RSA key pair generation
 - Error handling with toast notifications
 
 🌟 **User Experience**
-- Modern dark theme with green accents
+- Modern dark gray theme with green accents, inspired by VS Code
 - Smooth animations powered by Framer Motion
-- Responsive design
-- Accessibility features (ARIA labels)
-- Copy-to-clipboard functionality
+- Loading spinners during operations (react-spinners)
+- Responsive design for all screen sizes
+- Accessibility features (ARIA labels, focus states)
+- Copy-to-clipboard for keys, ciphertexts, plaintexts, and hashes
 
 ## 🛠️ Tech Stack
 🧩 **Frontend**
@@ -43,23 +43,31 @@ Hi! I'm [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty), a full-stack develo
 
 💻 **Development Tools**
 - Vite
-- react-toastify
-- react-spinners
+- react-toastify (notifications)
+- react-spinners (loading effects)
 
 ## 📁 Project Structure
 ```plaintext
-src/
-├── components/
-│   ├── Encryption/
-│   │   ├── SymmetricEncryption.jsx
-│   │   └── AsymmetricEncryption.jsx
-│   ├── Hashing/
-│   │   └── HashGenerator.jsx
-│   └── UI/
-├── services/
-│   └── cryptoService.js
-├── hooks/
-└── utils/
+.
+├── src/
+│   ├── assets/
+│   │   └── favicon.svg           # Optional favicon (e.g., lock icon)
+│   ├── components/
+│   │   ├── KeyPairGenerator.jsx  # RSA key pair generation
+│   │   ├── EncryptionForm.jsx    # Encryption form
+│   │   ├── DecryptionForm.jsx    # Decryption form
+│   │   └── HashingForm.jsx       # Hashing form
+│   ├── services/
+│   │   └── cryptoService.js      # Cryptographic operations
+│   ├── App.jsx                   # Main app component
+│   ├── main.jsx                  # React entry point
+│   └── index.css                 # Tailwind CSS styles
+├── index.html                    # HTML entry point
+├── package.json                  # Dependencies and scripts
+├── vite.config.js                # Vite configuration
+├── tailwind.config.js            # Tailwind CSS configuration
+├── postcss.config.js             # PostCSS configuration
+└── README.md                     # Project documentation
 ```
 
 ## ⚡ Environment Setup
@@ -133,15 +141,6 @@ Contributions are welcome! Please:
 3. Submit a pull request
 4. Include tests for new features
 
-## 🧪 Testing
-```bash
-# Run unit tests
-npm test
-
-# Run end-to-end tests
-npm run cypress
-```
-
 ## 🔨 Extensibility
 Add new algorithms by extending the crypto service:
 
@@ -161,6 +160,6 @@ addAlgorithm('newHash', async (data) => {
 MIT © [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty)
 
 ## 📫 Contact
-[![GitHub](https://img.shields.io/badge/GitHub-C4ll--0f-Du5ty-blue)](https://github.com/C4ll-0f-Du5ty)
+[![GitHub](https://img.shields.io/badge/GitHub-C4ll-0f-Du5ty-blue)](https://github.com/C4ll-0f-Du5ty)
 [![Portfolio](https://img.shields.io/badge/Portfolio-allem.pro-blue)](https://allem.pro/)
 [![Email](https://img.shields.io/badge/Gmail-allemhamed98%40gmail.com-red)](mailto:allemhamed98@gmail.com)
