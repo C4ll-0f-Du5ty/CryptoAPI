@@ -73,7 +73,7 @@ Hi! I'm [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty), a full-stack develo
 ## ⚡ Environment Setup
 ```bash
 # Clone repository
-git clone https://github.com/C4ll-0f-Du5ty/cryptoapi.git
+git clone https://github.com/C4ll-0f-Du5ty/CryptoAPI.git
 
 # Install dependencies
 npm install
@@ -160,6 +160,6 @@ addAlgorithm('newHash', async (data) => {
 MIT © [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty)
 
 ## 📫 Contact
-[![GitHub](https://img.shields.io/badge/GitHub-C4ll-0f-Du5ty-blue)](https://github.com/C4ll-0f-Du5ty)
+[![GitHub](https://img.shields.io/badge/GitHub-Allem-Black)](https://github.com/C4ll-0f-Du5ty)
 [![Portfolio](https://img.shields.io/badge/Portfolio-allem.pro-blue)](https://allem.pro/)
 [![Email](https://img.shields.io/badge/Gmail-allemhamed98%40gmail.com-red)](mailto:allemhamed98@gmail.com)
