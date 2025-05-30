@@ -165,11 +165,3 @@ MIT © [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty)
 [![GitHub](https://img.shields.io/badge/GitHub-C4ll--0f-Du5ty-blue)](https://github.com/C4ll-0f-Du5ty)
 [![Portfolio](https://img.shields.io/badge/Portfolio-allem.pro-blue)](https://allem.pro/)
 [![Email](https://img.shields.io/badge/Gmail-allemhamed98%40gmail.com-red)](mailto:allemhamed98@gmail.com)
-
-## 📚 Acknowledgments
-Special thanks to the maintainers of:
-- crypto-js
-- jsencrypt
-- Web Crypto API
-- react-toastify
-- react-spinners
