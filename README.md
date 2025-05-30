@@ -1,170 +1,175 @@
-# 🔒 CryptoAPI
+# 🚀 CryptoAPI
+🔒 A modern client-side cryptography toolkit built with React.js, providing a user-friendly interface for encryption, decryption, and hashing operations.
 
-**CryptoAPI** is a modern, client-side cryptography application built with React.js, Tailwind CSS, and Framer Motion by Allem Abdelaziz. It offers a user-friendly interface for encryption, decryption, and hashing using multiple cryptographic algorithms. Featuring a sleek, gray-themed design inspired by programming environments like VS Code, smooth animations, and loading effects, it ensures an intuitive and secure user experience.
+[![License](https://img.shields.io/github/license/allem-abdelaziz/cryptoapi)](LICENSE)
+[![Portfolio](https://img.shields.io/badge/Portfolio-allem.pro-blue)](https://allem.pro/)
+[![Contact](https://img.shields.io/badge/Gmail-allemhamed98%40gmail.com-red)](mailto:allemhamed98@gmail.com)
 
-<!-- ---
+## 👋 About Me
+Hi! I'm [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty), a full-stack developer specializing in React.js and secure web development. I built CryptoAPI to provide developers with an intuitive interface for cryptographic operations while maintaining security best practices.
 
-## 🌐 Live Demo
+## 🎯 Key Features
+🔑 **Encryption & Decryption**
+- Symmetric encryption (AES-256 CBC mode)
+- Triple DES encryption
+- Asymmetric RSA encryption (2048-bit key pairs)
 
-Access the deployed platform here:  
-👉 [https://crypto-api.allem.pro/](https://crypto-api.allem.pro/) *(Update with actual deployment link after hosting)* -->
+📊 **Hashing Algorithms**
+- SHA-256 and SHA-512 (Web Crypto API)
+- MD5 (educational purposes)
 
----
+⚙️ **Security Features**
+- Client-side processing
+- Input validation
+- Secure key generation
+- Error handling with toast notifications
 
-## 🚀 Key Features
+🌟 **User Experience**
+- Modern dark theme with green accents
+- Smooth animations powered by Framer Motion
+- Responsive design
+- Accessibility features (ARIA labels)
+- Copy-to-clipboard functionality
 
-- 🔐 **Symmetric Encryption/Decryption**:
-  - AES (CBC mode) with user-provided keys (min 16 characters).
-  - Triple DES with user-provided keys (min 24 characters).
-- 🔑 **Asymmetric Encryption/Decryption**:
-  - RSA with 2048-bit key pairs.
-- 🔍 **Hashing**:
-  - SHA-256 and SHA-512 using the Web Crypto API.
-  - MD5 (for educational purposes, not secure for production).
-- 🛠 **Key Generation**:
-  - Generate RSA public/private key pairs with one click.
-- 🎨 **User Interface**:
-  - Dark gray theme with green accents, optimized for eye comfort.
-  - Smooth tab transitions and result animations using Framer Motion.
-  - Loading spinners during cryptographic operations.
-  - Copy-to-clipboard functionality for keys, ciphertexts, plaintexts, and hashes.
-  - Responsive design for desktop and mobile devices.
-- 🛡️ **Security**:
-  - Client-side processing eliminates server-side vulnerabilities.
-  - Input validation for key lengths and RSA key formats.
-  - User-friendly error handling with toast notifications.
-- 📦 **Extensibility**:
-  - Modular `cryptoService.js` for easy addition of new algorithms.
+## 🛠️ Tech Stack
+🧩 **Frontend**
+- React.js
+- Tailwind CSS
+- Framer Motion
 
----
+🔒 **Cryptography**
+- crypto-js (AES, Triple DES)
+- jsencrypt (RSA)
+- Web Crypto API (SHA-256, SHA-512)
 
-## 🛠 Tech Stack
-
-- **Frontend:** React.js, Tailwind CSS, Framer Motion
-- **Cryptography Libraries:** crypto-js (AES, Triple DES), jsencrypt (RSA)
-- **Web Crypto API:** SHA-256, SHA-512
-- **Notifications:** react-toastify
-- **Loading Effects:** react-spinners
-- **Build Tool:** Vite
-
----
+💻 **Development Tools**
+- Vite
+- react-toastify
+- react-spinners
 
 ## 📁 Project Structure
+```plaintext
+src/
+├── components/
+│   ├── Encryption/
+│   │   ├── SymmetricEncryption.jsx
+│   │   └── AsymmetricEncryption.jsx
+│   ├── Hashing/
+│   │   └── HashGenerator.jsx
+│   └── UI/
+├── services/
+│   └── cryptoService.js
+├── hooks/
+└── utils/
+```
 
-.├── src/│   ├── assets/│   │   └── favicon.svg           # Optional favicon (e.g., lock icon)│   ├── components/│   │   ├── KeyPairGenerator.jsx  # RSA key pair generation│   │   ├── EncryptionForm.jsx    # Encryption form│   │   ├── DecryptionForm.jsx    # Decryption form│   │   └── HashingForm.jsx       # Hashing form│   ├── services/│   │   └── cryptoService.js      # Cryptographic operations│   ├── App.jsx                   # Main app component│   ├── main.jsx                  # React entry point│   └── index.css                 # Tailwind CSS styles├── index.html                    # HTML entry point├── package.json                  # Dependencies and scripts├── vite.config.js                # Vite configuration├── tailwind.config.js            # Tailwind CSS configuration├── postcss.config.js             # PostCSS configuration└── README.md                     # Project documentation
+## ⚡ Environment Setup
+```bash
+# Clone repository
+git clone https://github.com/C4ll-0f-Du5ty/cryptoapi.git
 
----
-
-## ⚙️ Environment Setup
-
-### ✅ Prerequisites
-
-- Node.js 16+ and npm
-
-### 🔐 Configuration
-
-No environment variables are required since this is a client-side application. All cryptographic operations are performed in the browser.
-
----
-
-## ▶️ Getting Started
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/C4ll-0f-Du5ty/crypto-api.git
-   cd crypto-api
-
-
-Install Dependencies:
+# Install dependencies
 npm install
 
-
-Run the Development Server:
+# Start development server
 npm run dev
+```
 
+## 🎮 Usage Guide
+### Encryption Operations
+1. Select encryption type (symmetric/asymmetric)
+2. Enter your data
+3. Provide required keys/passwords
+4. Click encrypt/decrypt
+5. Copy results using the copy button
 
-Open your browser and navigate to http://localhost:5173 (or the port specified by Vite).
+### Hash Generation
+1. Paste text to hash
+2. Select hashing algorithm
+3. View generated hash
+4. Copy hash using copy button
 
+## 🧩 Core Components
+### SymmetricEncryption Component
+```jsx
+import { useState } from 'react';
+import CryptoJS from 'crypto-js';
 
+const SymmetricEncryption = () => {
+  const [data, setData] = useState('');
+  const [key, setKey] = useState('');
 
-👤 Usage Guide
+  const handleEncrypt = () => {
+    // Implementation using crypto-js
+  };
 
+  return (
+    <div className="space-y-4">
+      {/* Component UI */}
+    </div>
+  );
+};
+```
 
+## 🔒 Security Considerations
+🛡️ **Input Validation**
+- Minimum key lengths enforced
+- Key format validation
+- Error handling for invalid inputs
 
-Action
-Description
+🔒 **Data Protection**
+- Client-side processing only
+- Secure random number generation
+- Proper cleanup of sensitive data
 
+⚠️ **Limitations**
+- MD5 implementation is for educational purposes only
+- Key storage is handled client-side
+- Browser compatibility requirements
 
+## 👥 Contributing
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+4. Include tests for new features
 
-Generate Keys
-Navigate to the "Keys" tab and click "Generate Keys" to create RSA key pairs.
+## 🧪 Testing
+```bash
+# Run unit tests
+npm test
 
+# Run end-to-end tests
+npm run cypress
+```
 
-Encrypt
-Select AES, Triple DES, or RSA, enter plaintext and key, then click "Encrypt".
+## 🔨 Extensibility
+Add new algorithms by extending the crypto service:
 
+```javascript
+// src/services/cryptoService.js
+export const addAlgorithm = (algorithmName, implementation) => {
+  // Add new algorithm implementation
+};
 
-Decrypt
-Select the same algorithm, enter ciphertext and key, then click "Decrypt".
+// Example usage:
+addAlgorithm('newHash', async (data) => {
+  // Custom implementation
+});
+```
 
+## 📜 License
+MIT © [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty)
 
-Hash
-Select SHA-256, SHA-512, or MD5, enter text, then click "Hash".
+## 📫 Contact
+[![GitHub](https://img.shields.io/badge/GitHub-C4ll--0f-Du5ty-blue)](https://github.com/C4ll-0f-Du5ty)
+[![Portfolio](https://img.shields.io/badge/Portfolio-allem.pro-blue)](https://allem.pro/)
+[![Email](https://img.shields.io/badge/Gmail-allemhamed98%40gmail.com-red)](mailto:allemhamed98@gmail.com)
 
-
-
-❗ Note: Copy results or keys using the "Copy" buttons for easy access. Store RSA private keys securely, as they cannot be recovered if lost.
-
-
-📂 Core Components
-
-KeyPairGenerator — Generates RSA public/private key pairs with copy functionality.
-EncryptionForm — Handles encryption with AES, Triple DES, or RSA.
-DecryptionForm — Handles decryption with AES, Triple DES, or RSA.
-HashingForm — Generates hashes using SHA-256, SHA-512, or MD5.
-
-
-🛡️ Security Considerations
-
-Client-Side Processing: All operations are performed in the browser, eliminating risks like SQL injection or server-side buffer overflows.
-Key Management: Users must securely store AES/Triple DES keys and RSA private keys.
-Input Validation: Enforces minimum key lengths (16 for AES, 24 for Triple DES) and valid RSA keys.
-RSA Limitations: Suitable for short messages only; consider hybrid encryption for longer data.
-MD5 Warning: Included for educational purposes but cryptographically broken; avoid for secure applications.
-Accessibility: ARIA labels and focus states ensure compatibility with screen readers and keyboard navigation.
-
-
-🔍 Testing
-The application has been thoroughly tested for:
-
-Correct encryption/decryption with AES, Triple DES, and RSA.
-Accurate hashing with SHA-256, SHA-512, and MD5 (e.g., SHA-256 of "test" produces 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08).
-Error handling for invalid inputs (e.g., short keys, invalid ciphertexts).
-Smooth animations and loading spinners during operations.
-Responsive design across desktop and mobile devices.
-Accessibility with screen readers and keyboard navigation.
-
-To test manually:
-
-Generate RSA keys and verify encryption/decryption.
-Test AES and Triple DES with various key lengths.
-Compare hash outputs with known values.
-Ensure copy-to-clipboard and animations work as expected.
-
-
-📦 Extensibility
-To add a new algorithm:
-
-Update cryptoService.js with new encryption/decryption or hashing methods.
-Add the algorithm to dropdowns in EncryptionForm.jsx, DecryptionForm.jsx, or HashingForm.jsx.
-Update UI to handle any specific input requirements.
-
-
-🤝 Contributing
-Pull requests are welcome. For large changes, please open an issue first to discuss your ideas and goals.
-
-📄 License
-This project is licensed under the MIT License.
-
-📬 Contact
-Developed by Allem Abdelaziz📧 Email: allemhamed98@gmail.com🔗 GitHub: https://github.com/C4ll-0f-Du5ty💼 Portfolio: https://allem.pro/```
+## 📚 Acknowledgments
+Special thanks to the maintainers of:
+- crypto-js
+- jsencrypt
+- Web Crypto API
+- react-toastify
+- react-spinners
