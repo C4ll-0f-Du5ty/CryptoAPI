@@ -8,6 +8,7 @@ Access the deployed platform: [CryptoAPI](https://cryptoapi.allem.pro)
 ## 👋 About Me
 Hi! I'm [Allem Abdelaziz](https://github.com/C4ll-0f-Du5ty), A Full Stack Developer skilled in Django REST Framework and React.js, focused on building scalable and secure
 applications. Experienced in clean architecture design and optimizing API performance. Known for strong problem-solving abilities and a commitment to producing high-quality code. Eager to embrace new technologies to improve development efficiency.
+
 [![Portfolio](https://img.shields.io/badge/Portfolio-allem.pro-blue)](https://allem.pro/)
 [![Contact](https://img.shields.io/badge/Gmail-allemhamed98%40gmail.com-red)](mailto:allemhamed98@gmail.com)
 
