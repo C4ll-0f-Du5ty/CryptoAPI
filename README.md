@@ -1,7 +1,6 @@
 # 🚀 CryptoAPI
 🔒 A modern client-side cryptography toolkit built with React.js, providing a user-friendly interface for encryption, decryption, and hashing operations.
 
-[![License](https://img.shields.io/github/license/allem-abdelaziz/cryptoapi)](LICENSE)
 [![Portfolio](https://img.shields.io/badge/Portfolio-allem.pro-blue)](https://allem.pro/)
 [![Contact](https://img.shields.io/badge/Gmail-allemhamed98%40gmail.com-red)](mailto:allemhamed98@gmail.com)
 
